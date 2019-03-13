@@ -7,7 +7,7 @@ var questions = [{
         options: ["a: 1970", "b: 2003", "c: 1956", "d: 1994"],
         answer: 1
     },{
-        question: "2) What book launched the modern environmental movement, and led to the widespread ban of DDT",
+        question: "2) What book launched the modern environmental movement, and led to the widespread ban of DDT?",
         options: [
             "a: Earth in the Balance", 
             "b: Pesticides and pollution", 
@@ -25,7 +25,7 @@ var questions = [{
         ],
         answer: 2
     },{
-        question: "4) What percentage of food produced globally never makes it to the table.",
+        question: "4) What percentage of food produced globally never makes it to the table?",
         options: [
             "a: 10%", 
             "b: 25%", 
@@ -92,28 +92,25 @@ var questions = [{
 var correct = 0;
 var incorrect = 0;
 var unanswered = 0;
-var timer = 60;
+
+var timer = 100;
 var intervalId;
 
 function run(){
-    timer = timer - 1;
-    clearIntervalid(intervalidId)
-    intervalidID = setInterval(run, 1000);
-    }
-
-function stop(){
     clearInterval(intervalId);
-}
-
+    intervalidID = setInterval(decrement, 1000);
+    }
+    function stop(){
+        clearInterval(intervalId);   
+    }
 function decrement(){
     timer--;
-    $("#timer").text(timer);
+    $("#timer").html("<h2> Time remaining: " + timer + "<h2><br>");
     if (timer === 0){
-        unanswered++;
-        stop();
-        results();
+        stop()
         score();
-    
+        results();
+        
     }
 }
 
@@ -124,9 +121,6 @@ $("#start").hide();
 $("#timer").html("<h2> Time remaining: " + timer + "<h2><br>");
 
 $("#submit").html("<button id=submit>Submit</button>");
-
-//  figure out what is wrong with my timer function
-// run();
 
 $("#q1").html("<h3>" + questions[0].question + "</h3>");
 $("#a1").html("<input type='radio' name='a1' value='1'> " + "<label> " + questions[0].options[0] + "</label><br>"
@@ -188,6 +182,8 @@ $("#a10").html("<input type='radio' name='answer1' value='1'> " + "<label> " + q
     + "<input type='radio' name='a10 value='3'> " + "<label> " + questions[9].options[2] + "</label><br>"
     + "<input type='radio' name='a10 value='4'> " + "<label> " + questions[9].options[3] + "</label><br><br>"
 );
+
+run();
 });
 
 function results(){
@@ -321,4 +317,3 @@ $("#submit").on("click", function(){
 });
 
 })
-

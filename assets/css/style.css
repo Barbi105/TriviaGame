@@ -1,6 +1,6 @@
 body{
     background-image: url(../images/leaves.png);
-    /* background-size: cover; */
+    
 }
 .jumbotron{
     /* margin:50px 0 100px 0px; */
@@ -10,9 +10,9 @@ body{
     text-align: center;
     margin: 30px 0 0 0;
     font-size: 100px;
-    /* font-family: 'Fredericka the Great', cursive; */
+    font-family: 'Fredericka the Great', cursive;
     /* font-family: 'Bungee Shade', cursive; */
-    font-family: 'Londrina Shadow', cursive;
+    /* font-family: 'Londrina Shadow', cursive; */
 }
 #main{
     font-size: 20px;
@@ -25,4 +25,9 @@ body{
     text-align: center;
     font-size: 50px;
     font-family: 'Roboto', sans-serif;
+}
+
+#resultsMessage{
+    font-size: 20px;
+    font-weight: normal;
 }

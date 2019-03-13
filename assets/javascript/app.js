@@ -190,7 +190,7 @@ function results(){
     $("#questions").hide();
     $("#timer").hide();
 
-    $("#resultsMessage").html("<h3>All Done!</h3>");
+    $("#resultsMessage").html("<h3>To play again refresh the page!</h3>");
     $("#correct").html("<h2> Correct Answers: " + correct + "<h2>");
     $("#incorrect").html("<h2> Incorrect Answers: " + incorrect + "<h2>");
     $("#unanswered").html("<h2> Unanswered: " + unanswered + "<h2>");

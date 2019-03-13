@@ -11,15 +11,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>
 </head>
-
-<h1 class="display-4" id="title">Earth Day Trivia</h1>
-        <br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-md-10">
+            <h1 class="display-4" id="title">Earth Day Trivia</h1>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+</div>
 <div class="jumbotron jumbotron-fluid">
 <div class="container" id="quiz">
-
-<button type="button" id="start">Start</button>
-        <!-- timer -->
+    <div class="row">
+        <div class="col-sm-5"></div>
+        <div class="col-md-2">
+            <button type="button" id="start">Start</button>
+            <br>
+        </div>
+        <div class="col-sm-5"></div>
+    </div>
+<!-- timer -->
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-md-6">
         <div id ="timer"></div>
+        <br>
+    </div>
+    <div class="col-sm-3"></div>
+</div>
+        
 <secion id="questions">
         <!-- question & answers -->
         <div id="q1"></div>   
@@ -46,10 +66,12 @@
 </secion>
 <section id="results">
         <!-- results -->
-        <div id="resultsMessage"></div>
+        
         <div id="correct"></div>
         <div id="incorrect"></div>
         <div id="unanswered"></div>
+        <br>
+        <div id="resultsMessage"></div>
 </section>
 </div>
 </div>
